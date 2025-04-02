@@ -1,0 +1,28 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    int arr[5];
+    cout << "\nEnter 5 Numbers in the array ";
+    for(int i=0;i<5;i++){
+        cin>>arr[i];
+    }
+    int new_arr[5];
+    
+    int d,n,p=1;
+    for(int i=0;i<5;i++){
+        n=arr[i];
+        p=1;
+        while(n>0){
+            d=n%10;
+            p=p*d;
+            n=n/10;
+        }
+        new_arr[i]=p;
+    }
+    cout<<"\nUpdated Array ";
+    for(int i=0;i<5;i++){
+        cout<<new_arr[i]<<endl;
+    }
+    return 0;
+}
